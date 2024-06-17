@@ -1,0 +1,91 @@
+body {
+    display: grid;
+    grid-template-areas:
+        'logo title title title title'
+        'logo links links links links'
+        'side side side side side'
+        'main main main main main'
+        'bottom bottom bottom bottom bottom';
+}
+
+section {
+    padding: 50px;
+}
+
+section h1 {
+    font-size: 30pt;
+}
+
+section h2 {
+    text-align: justify;
+}
+
+section p {
+    font-size: large;
+    text-align: justify;
+
+}
+
+.asider a {
+    float: right;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+    line-height: 30px;
+    padding: 7px;
+    background-color: rgb(3, 89, 117);
+    width: 19%;
+    border-radius: 3px;
+
+}
+
+.asider a:hover {
+    text-decoration: underline;
+    color: rgb(29, 173, 173);
+}
+
+.asider .active {
+    color: white;
+    background-color: rgb(4, 60, 79);
+}
+
+@media (min-width: 900px) {
+    body {
+        grid-template-areas:
+            'logo title title title title'
+            'logo links links links links'
+            'side main main main main'
+            'bottom bottom bottom bottom bottom';
+    }
+
+    nav {
+        top: 117px;
+    }
+
+    .asider a {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 70%;
+        float: none;
+        margin: 20px
+    }
+
+    .asider {
+        display: block;
+    }
+
+    section article {
+        width: 70%;
+        text-align: center;
+    }
+
+    section h1:nth-child(1) {
+        font-size: 40pt;
+    }
+
+    .question p {
+        font-size: 30pt;
+    }
+}

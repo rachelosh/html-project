@@ -1,0 +1,264 @@
+body {
+    direction: rtl;
+    display: grid;
+    grid-template-areas:
+        'logo title title title title'
+        'logo links links links links'
+        'main main main main main'
+        'side side side side side'
+        'bottom bottom bottom bottom bottom';
+    margin: 0;
+}
+
+header {
+    grid-area: title;
+    text-align: center;
+    line-height: 20px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+aside {
+    border-bottom: 3px solid black;
+    line-height: 10px;
+    grid-area: logo;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+aside img {
+    width: 70%;
+    padding: 10px;
+    border-radius: 47px;
+    margin-right: 20px;
+}
+
+nav {
+    display: flex;
+    border-bottom: 3px solid black;
+    grid-area: links;
+    position: sticky;
+    top: 103px;
+    background-color: white;
+}
+
+nav a {
+    text-align: center;
+    flex: 1;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(29, 173, 173);
+}
+
+.active {
+    background-color: black;
+    color: white;
+}
+
+section {
+    grid-area: main;
+    padding: 20px;
+    text-align: center;
+    background-image: url("images/background.jpg");
+}
+
+article {
+    margin: 5px;
+}
+
+.asider {
+    grid-area: side;
+    padding: 20px;
+    background-image: url("images/background.jpg");
+    text-align: center;
+}
+
+.asider img {
+    width: 80%;
+    border: 7px double black;
+}
+
+.asider .winter {
+    display: flex;
+}
+
+.winter img {
+    flex: 1;
+    width: 30%;
+}
+
+footer {
+    grid-area: bottom;
+    background-image: url("images/background.jpg");
+    text-align: center;
+    height: 250px;
+}
+
+.animation {
+    animation-name: logo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#f1,
+#f6 {
+    animation-delay: -4s;
+}
+
+#f2,
+#f5 {
+    animation-delay: -2s;
+}
+
+#f3,
+#f4 {
+    animation-delay: 0s;
+}
+
+@keyframes logo {
+    0% {
+        width: 0px;
+    }
+
+    25% {
+        width: 50px !important;
+    }
+
+    50% {
+        width: 100px !important;
+    }
+
+    75% {
+        width: 150px !important;
+    }
+
+    100% {
+        width: 200px;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+form .detales {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+form fieldset,
+form textarea {
+    display: flex;
+    flex: 1;
+    margin: 5px;
+    border: 3px dashed white;
+    width: 70%;
+    margin-right: 50px;
+}
+
+form article,
+form h1 {
+    flex: 1;
+}
+
+form fieldset article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+form fieldset legend img {
+    width: 100px;
+}
+
+form article label,
+form article input {
+    margin: 5px;
+}
+
+@media (min-width: 700px) {
+    aside img {
+        width: 50%;
+    }
+
+    section h1,
+    section h2 {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 900px) {
+    aside img {
+        width: 45%;
+        border-radius: 60px;
+    }
+
+    form .detales {
+        flex-direction: row;
+    }
+
+    form fieldset {
+        flex: 1;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    body {
+        grid-template-areas:
+            'logo title title title title'
+            'logo links links links links'
+            'side side main main main'
+            'bottom bottom bottom bottom bottom';
+    }
+
+    aside img {
+        width: 40%;
+    }
+
+    nav {
+        line-height: 25px;
+    }
+
+    section {
+        padding: 100px;
+    }
+
+    section img {
+        animation-duration: 4s;
+    }
+
+    .asider {
+        padding-top: 100px;
+    }
+
+    .asider img {
+        width: 95%;
+    }
+
+    .asider .winter {
+        display: block;
+    }
+
+    .asider .winter img {
+        margin-right: 100px;
+        width: 30%;
+    }
+}
+
+@media (min-width:1300px) {
+    nav {
+        line-height: 40px;
+    }
+}

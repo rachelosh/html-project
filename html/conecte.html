@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>connects</title>
+    <style>
+        h1 img {
+            width: 20%;
+            border: none;
+        }
+
+        body {
+            grid-template-areas:
+                'logo title title title title'
+                'logo links links links links'
+                'main main main main main'
+                'bottom bottom bottom bottom bottom';
+        }
+
+        nav {
+            top: 105.5px;
+        }
+
+        .detales article {
+            padding-top: 30px;
+        }
+
+        @media (min-width: 1000px) {
+            nav {
+                top: 133px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <aside>
+        <img src="../images/logo.jpg">
+    </aside>
+    <header>
+        <h1>מירי קליין</h1>
+        <h2>רפואה סינית לאיזון ולצמיחה</h2>
+    </header>
+    <nav>
+        <a href="home.html">דף הבית</a>
+        <a href="article.html">כתבות</a>
+        <a href="conecte.html" class="active">צור קשר</a>
+        <a href="about.html">אודות</a>
+    </nav>
+    <section>
+        <form>
+            <h1>רוצה לשאול משהו? להתייעץ? אני זמינה ואשמח לעזור! <img src="../images/tel.gif" alt="טלפון"></h1>
+            <div class="detales">
+                <fieldset>
+                    <legend><img src="../images/back_img.jpg"></legend>
+                    <article>
+                        <label for="fname">שם פרטי:</label>
+                        <label for="lname">שם משפחה:</label>
+                        <label for="mail">כתובת מייל:</label>
+                        <label for="tel">מספר טלפון:</label>
+                    </article>
+                    <article>
+                        <input type="text" name="firstName" id="fname" required>
+                        <input type="text" name="lastName" id="lname" required>
+                        <input type="email" name="mail" id="mail" required>
+                        <input type="tel" name="tel" id="tel" required>
+                    </article>
+                </fieldset>
+                <article>
+                    <textarea name="told" rows="7" cols="50">קצת רקע על עצמך.....</textarea>
+                </article>
+            </div>
+            <article>
+                <input type="submit">
+            </article>
+        </form>
+    </section>
+    <footer>
+        <img src="../images/back_img.jpg" id="f1" class="animation">
+        <img src="../images/back_img.jpg" id="f2" class="animation">
+        <img src="../images/back_img.jpg" id="f3" class="animation">
+        <img src="../images/back_img.jpg" id="f4" class="animation">
+        <img src="../images/back_img.jpg" id="f5" class="animation">
+        <img src="../images/back_img.jpg" id="f6" class="animation">
+    </footer>
+</body>
+
+</html>
